@@ -46,7 +46,7 @@ Run the non-destructive validation target:
 make validate
 ```
 
-The target runs `helm lint`, renders both configurations, checks the production values, and runs `kubectl apply --dry-run=client`. It does not contact a cluster or create resources.
+The target runs `helm lint`, renders both configurations, and checks the production values in the generated YAML. It does not contact a cluster or create resources.
 
 To render each output manually:
 

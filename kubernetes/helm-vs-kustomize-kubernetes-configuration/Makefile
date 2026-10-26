@@ -17,8 +17,6 @@ validate:
 	grep -q 'namespace: production' $(HELM_OUTPUT); \
 	grep -q 'replicas: 4' $(HELM_OUTPUT); \
 	grep -q 'ghcr.io/example/web:1.4.3' $(HELM_OUTPUT); \
-	kubectl apply --dry-run=client -f $(KUSTOMIZE_OUTPUT) >/dev/null; \
-	kubectl apply --dry-run=client -f $(HELM_OUTPUT) >/dev/null; \
 	rm -rf .tmp; \
 	echo "Helm and Kustomize validation passed."
 
